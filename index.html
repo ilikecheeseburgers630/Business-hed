@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brothers Insulation Foam & Drywall LLC — Professional spray foam insulation and drywall services in Waukee, Clive, and central Iowa. 5-star rated. Get a free quote today." />
+  <title>Brothers Insulation Foam & Drywall LLC | Waukee, IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+        <span class="logo-text">Brothers <span class="accent">IFD</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#how-it-works" class="nav-link">Process</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#service-area" class="nav-link">Service Area</a></li>
+        <li><a href="#contact" class="nav-cta">Get Free Quote</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal"><i class="fa-solid fa-star"></i> 5.0 Star Rated · Waukee, IA</div>
+      <h1 class="hero-title reveal">Insulation &amp; Drywall<br /><span class="gradient-text">Built to Last.</span></h1>
+      <p class="hero-subtitle reveal">Professional spray foam insulation and drywall services for central Iowa homeowners and builders. On time. Clean work. Guaranteed.</p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i> Get Free Quote</a>
+        <a href="tel:+15155550000" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Now</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item"><span class="stat-number">5.0</span><span class="stat-label">Star Rating</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">On-Time</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-number">Iowa</span><span class="stat-label">Licensed &amp; Insured</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">From new construction to repairs — we handle it all with precision and care.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+          <div class="service-glow"></div>
+          <h3>Open-Cell Spray Foam</h3>
+          <p>Flexible, breathable insulation ideal for interior walls and attics. Excellent sound dampening and air sealing at a cost-effective price point.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Superior air sealing</li>
+            <li><i class="fa-solid fa-check"></i> Sound reduction</li>
+            <li><i class="fa-solid fa-check"></i> Budget-friendly</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal featured" data-delay="100">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="service-glow"></div>
+          <h3>Closed-Cell Spray Foam</h3>
+          <p>The highest-performing insulation available. Creates a rigid, moisture-resistant barrier with the best R-value per inch — perfect for crawl spaces, basements, and exteriors.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Highest R-value</li>
+            <li><i class="fa-solid fa-check"></i> Moisture &amp; vapor barrier</li>
+            <li><i class="fa-solid fa-check"></i> Structural reinforcement</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+          <div class="service-glow"></div>
+          <h3>New Construction Drywall</h3>
+          <p>Full drywall installation for new builds — hang, tape, finish, and texture. We work with builders and contractors to stay on schedule and on budget.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Hang, tape &amp; finish</li>
+            <li><i class="fa-solid fa-check"></i> Texture matching</li>
+            <li><i class="fa-solid fa-check"></i> Builder-friendly scheduling</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+          <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+          <div class="service-glow"></div>
+          <h3>Drywall Repair</h3>
+          <p>Holes, cracks, water damage — no job too small. We patch and blend seamlessly so you can't tell the repair was ever there.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Seamless blending</li>
+            <li><i class="fa-solid fa-check"></i> Water damage repair</li>
+            <li><i class="fa-solid fa-check"></i> Fast turnaround</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="400">
+          <div class="service-icon"><i class="fa-solid fa-volume-xmark"></i></div>
+          <div class="service-glow"></div>
+          <h3>Wall Soundproofing</h3>
+          <p>Reduce noise between rooms, floors, and from outside. We use proven acoustic techniques — spray foam, resilient channels, and specialty drywall — for a quieter home.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Home theater rooms</li>
+            <li><i class="fa-solid fa-check"></i> Bedroom privacy</li>
+            <li><i class="fa-solid fa-check"></i> Multi-family units</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card cta-card reveal" data-delay="500">
+          <div class="service-glow"></div>
+          <i class="fa-solid fa-phone-volume cta-card-icon"></i>
+          <h3>Not Sure What You Need?</h3>
+          <p>We'll walk you through the best solution for your home or project — no pressure, just honest advice.</p>
+          <a href="tel:+15155550000" class="btn btn-primary" style="margin-top:1.5rem;"><i class="fa-solid fa-phone"></i> Call Us Free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us" id="why-us">
+    <div class="why-bg-shape"></div>
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-left reveal">
+          <span class="section-label">Why Brothers IFD?</span>
+          <h2 class="section-title">The Standard Others Claim.<br /><span class="gradient-text">We Deliver.</span></h2>
+          <p class="why-desc">We're not a big-box operation. We're local tradespeople who take personal pride in every job — which is why our customers keep coming back and sending their friends.</p>
+          <a href="#contact" class="btn btn-primary">Start Your Project</a>
+        </div>
+        <div class="why-right">
+          <div class="benefit-card reveal" data-delay="0"><div class="benefit-icon"><i class="fa-solid fa-certificate"></i></div><div class="benefit-text"><h4>Licensed &amp; Insured</h4><p>Fully licensed in Iowa and insured for your peace of mind. Every job is done to code.</p></div></div>
+          <div class="benefit-card reveal" data-delay="100"><div class="benefit-icon"><i class="fa-solid fa-clock"></i></div><div class="benefit-text"><h4>Always On Time</h4><p>We show up when we say we will. No waiting, no guessing, no excuses — your time is valuable.</p></div></div>
+          <div class="benefit-card reveal" data-delay="200"><div class="benefit-icon"><i class="fa-solid fa-broom"></i></div><div class="benefit-text"><h4>We Clean Up After Ourselves</h4><p>We leave your property the way we found it — cleaner, actually. Full job-site cleanup is standard.</p></div></div>
+          <div class="benefit-card reveal" data-delay="300"><div class="benefit-icon"><i class="fa-solid fa-star"></i></div><div class="benefit-text"><h4>5-Star Reputation</h4><p>Every review, every customer — we've earned a perfect 5.0 rating through consistent, quality work.</p></div></div>
+          <div class="benefit-card reveal" data-delay="400"><div class="benefit-icon"><i class="fa-solid fa-handshake"></i></div><div class="benefit-text"><h4>Honest &amp; Transparent Pricing</h4><p>You'll get a clear, detailed quote upfront — no hidden fees, no surprise charges at the end.</p></div></div>
+          <div class="benefit-card reveal" data-delay="500"><div class="benefit-icon"><i class="fa-solid fa-house"></i></div><div class="benefit-text"><h4>Local &amp; Community-Focused</h4><p>Based in Waukee, we're your neighbors — invested in the community we serve every day.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Simple Process</span>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">Getting started is easy. We keep it straightforward from first contact to final cleanup.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal" data-delay="0"><div class="step-number">01</div><div class="step-icon"><i class="fa-solid fa-comments"></i></div><h3>Free Consultation</h3><p>Call us or fill out the quote form. We'll ask a few questions about your project, property, and goals — no obligation, no pressure.</p></div>
+        <div class="step-card reveal" data-delay="150"><div class="step-number">02</div><div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div><h3>On-Site Assessment &amp; Quote</h3><p>We visit your property, assess the scope of work, and deliver a clear, itemized quote — usually within 24 hours.</p></div>
+        <div class="step-card reveal" data-delay="300"><div class="step-number">03</div><div class="step-icon"><i class="fa-solid fa-circle-check"></i></div><h3>Professional Installation</h3><p>Our crew shows up on schedule, does the job right the first time, cleans up completely, and makes sure you're 100% satisfied.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What Customers Say</span>
+        <h2 class="section-title">5-Star Reviews</h2>
+        <p class="section-sub">Don't take our word for it — here's what real customers say about working with Brothers IFD.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card featured-review reveal" data-delay="0">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>"Loved working with these guys. Showed up on time. Perfect work and cleaned up everything before they left. Would recommend to anyone I know."</blockquote>
+          <div class="reviewer"><div class="reviewer-avatar">CF</div><div class="reviewer-info"><strong>Charles Foster</strong><span>Verified Customer · Waukee, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
+        </div>
+        <div class="review-card reveal" data-delay="150">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>"Incredibly professional team. They explained exactly what spray foam was best for our basement and got the job done in one day. The energy bill drop has been noticeable!"</blockquote>
+          <div class="reviewer"><div class="reviewer-avatar">MR</div><div class="reviewer-info"><strong>Mike R.</strong><span>Verified Customer · Clive, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
+        </div>
+        <div class="review-card reveal" data-delay="300">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>"Used Brothers IFD for drywall on our new build. Flawless finish, on schedule, easy to work with. Our GC already has them lined up for the next two projects."</blockquote>
+          <div class="reviewer"><div class="reviewer-avatar">JT</div><div class="reviewer-info"><strong>Jennifer T.</strong><span>Verified Customer · Waukee, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
+        </div>
+      </div>
+      <div class="reviews-cta reveal">
+        <div class="rating-summary"><span class="big-rating">5.0</span><div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><span class="rating-label">Average Google Rating</span></div>
+        <a href="https://g.page/r/review" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-google"></i> Leave Us a Review</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-area" id="service-area">
+    <div class="container">
+      <div class="service-area-inner">
+        <div class="area-left reveal">
+          <span class="section-label">Where We Work</span>
+          <h2 class="section-title">Serving Central Iowa</h2>
+          <p>Brothers Insulation Foam &amp; Drywall LLC is based in <strong>Waukee, IA</strong> — just 5–10 minutes from Clive — and proudly serves the entire central Iowa region.</p>
+          <div class="area-tags">
+            <span class="area-tag primary"><i class="fa-solid fa-location-dot"></i> Waukee</span>
+            <span class="area-tag primary"><i class="fa-solid fa-location-dot"></i> Clive</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> West Des Moines</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Urbandale</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Ankeny</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Johnston</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Des Moines</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Grimes</span>
+            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Altoona</span>
+            <span class="area-tag more"><i class="fa-solid fa-ellipsis"></i> And More</span>
+          </div>
+          <p class="area-note"><i class="fa-solid fa-circle-info"></i> Not sure if we cover your area? <a href="#contact">Send us a message</a> — we travel for the right job.</p>
+        </div>
+        <div class="area-right reveal">
+          <div class="map-card">
+            <div class="map-pulse"><div class="pulse-ring"></div><div class="pulse-ring delay-1"></div><div class="pulse-ring delay-2"></div><div class="map-pin"><i class="fa-solid fa-location-dot"></i></div></div>
+            <div class="map-label">Waukee, Iowa</div>
+            <div class="map-sublabel">Serving a 50-mile radius</div>
+            <div class="map-stats">
+              <div class="map-stat"><i class="fa-solid fa-road"></i><span>5–10 min from Clive</span></div>
+              <div class="map-stat"><i class="fa-solid fa-city"></i><span>All central Iowa</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get Started</span>
+        <h2 class="section-title">Request Your <span class="gradient-text">Free Quote</span></h2>
+        <p class="section-sub">Fill out the form and we'll get back to you within one business day. No commitment required.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Get in Touch</h3>
+          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><span class="contact-label">Phone</span><a href="tel:+15155550000" class="contact-value">(515) 555-0000</a></div></div>
+          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><span class="contact-label">Email</span><a href="mailto:info@brothersifd.com" class="contact-value">info@brothersifd.com</a></div></div>
+          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><span class="contact-label">Based In</span><span class="contact-value">Waukee, Iowa</span></div></div>
+          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-clock"></i></div><div><span class="contact-label">Hours</span><span class="contact-value">Mon–Sat: 7AM – 6PM</span></div></div>
+          <div class="contact-promise"><i class="fa-solid fa-bolt"></i><div><strong>Fast Response Guarantee</strong><p>We respond to all quote requests within 1 business day.</p></div></div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="John Smith" required /><span class="field-error" id="nameError"></span></div>
+              <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(515) 000-0000" required /><span class="field-error" id="phoneError"></span></div>
+            </div>
+            <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="john@example.com" required /><span class="field-error" id="emailError"></span></div>
+            <div class="form-group"><label for="service">Service Needed *</label><select id="service" name="service" required><option value="">Select a service...</option><option value="open-cell-foam">Open-Cell Spray Foam</option><option value="closed-cell-foam">Closed-Cell Spray Foam</option><option value="new-construction-drywall">New Construction Drywall</option><option value="drywall-repair">Drywall Repair</option><option value="soundproofing">Wall Soundproofing</option><option value="not-sure">Not Sure / Need Advice</option></select><span class="field-error" id="serviceError"></span></div>
+            <div class="form-group"><label for="message">Project Details</label><textarea id="message" name="message" rows="4" placeholder="Tell us about your project — size, location, timeline, any questions..."></textarea></div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> Send My Quote Request</button>
+            <div class="form-success" id="formSuccess"><i class="fa-solid fa-circle-check"></i><strong>Message Sent!</strong> We'll be in touch within 1 business day.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo"><span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span><span class="logo-text">Brothers <span class="accent">IFD</span></span></a>
+          <p>Brothers Insulation Foam &amp; Drywall LLC — delivering professional insulation and drywall services across central Iowa with a commitment to quality, honesty, and craftsmanship.</p>
+          <div class="footer-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>5.0 Google Rating</span></div>
+        </div>
+        <div class="footer-links-col"><h4>Services</h4><ul><li><a href="#services">Open-Cell Spray Foam</a></li><li><a href="#services">Closed-Cell Spray Foam</a></li><li><a href="#services">New Construction Drywall</a></li><li><a href="#services">Drywall Repair</a></li><li><a href="#services">Wall Soundproofing</a></li></ul></div>
+        <div class="footer-links-col"><h4>Company</h4><ul><li><a href="#why-us">Why Choose Us</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#service-area">Service Area</a></li><li><a href="#contact">Get Free Quote</a></li></ul></div>
+        <div class="footer-contact-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+15155550000">(515) 555-0000</a></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:info@brothersifd.com">info@brothersifd.com</a></div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waukee, Iowa</span></div><div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>Mon–Sat: 7AM – 6PM</span></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Brothers Insulation Foam &amp; Drywall LLC. All rights reserved. · Waukee, IA</p><p class="footer-disclaimer">Licensed &amp; Insured · Serving central Iowa</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>
