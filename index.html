@@ -1,236 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Brothers Insulation Foam & Drywall LLC — Professional spray foam insulation and drywall services in Waukee, Clive, and central Iowa. 5-star rated. Get a free quote today." />
+  <meta name="description" content="Brothers Insulation Foam & Drywall LLC — Waukee, IA's premier spray foam insulation and drywall contractor. Energy-efficient solutions for central Iowa homes." />
   <title>Brothers Insulation Foam & Drywall LLC | Waukee, IA</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue:   '#2563EB',
+              navy:   '#1E3A8A',
+              dark:   '#0A0F1E',
+              darker: '#060A14',
+              orange: '#F97316',
+              amber:  '#FBBF24',
+              cyan:   '#06B6D4',
+              slate:  '#1E293B',
+            }
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
-        <span class="logo-text">Brothers <span class="accent">IFD</span></span>
+
+<body class="bg-brand-dark text-white font-body antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-4 left-4 right-4 z-50 transition-all duration-300">
+    <div class="glass-nav rounded-2xl px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
+      <a href="#home" class="flex items-center gap-3 group cursor-pointer">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-brand-blue/50 transition-shadow duration-300">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white fill-none stroke-white stroke-2 stroke-linecap-round stroke-linejoin-round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22"/>
+          </svg>
+        </div>
+        <div class="hidden sm:block">
+          <div class="font-heading font-semibold text-white text-sm leading-tight">Brothers Insulation</div>
+          <div class="text-brand-cyan text-xs font-medium">Foam & Drywall LLC</div>
+        </div>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#why-us" class="nav-link">Why Us</a></li>
-        <li><a href="#how-it-works" class="nav-link">Process</a></li>
-        <li><a href="#reviews" class="nav-link">Reviews</a></li>
-        <li><a href="#service-area" class="nav-link">Service Area</a></li>
-        <li><a href="#contact" class="nav-cta">Get Free Quote</a></li>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="#services" class="text-sm font-medium text-slate-300 hover:text-white cursor-pointer transition-colors duration-200">Services</a></li>
+        <li><a href="#why-us"   class="text-sm font-medium text-slate-300 hover:text-white cursor-pointer transition-colors duration-200">Why Us</a></li>
+        <li><a href="#process"  class="text-sm font-medium text-slate-300 hover:text-white cursor-pointer transition-colors duration-200">Process</a></li>
+        <li><a href="#reviews"  class="text-sm font-medium text-slate-300 hover:text-white cursor-pointer transition-colors duration-200">Reviews</a></li>
+        <li><a href="#contact"  class="text-sm font-medium text-slate-300 hover:text-white cursor-pointer transition-colors duration-200">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-brand-blue/40 transition-all duration-200 cursor-pointer">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          Get Free Quote
+        </a>
+        <button id="menu-toggle" class="md:hidden w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition cursor-pointer" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-5 h-5 text-white" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-2 glass-nav rounded-2xl px-6 py-5 max-w-7xl mx-auto">
+      <ul class="flex flex-col gap-4">
+        <li><a href="#services" class="mobile-link block text-slate-200 font-medium hover:text-white cursor-pointer transition-colors">Services</a></li>
+        <li><a href="#why-us"   class="mobile-link block text-slate-200 font-medium hover:text-white cursor-pointer transition-colors">Why Us</a></li>
+        <li><a href="#process"  class="mobile-link block text-slate-200 font-medium hover:text-white cursor-pointer transition-colors">Process</a></li>
+        <li><a href="#reviews"  class="mobile-link block text-slate-200 font-medium hover:text-white cursor-pointer transition-colors">Reviews</a></li>
+        <li><a href="#contact"  class="mobile-link block text-slate-200 font-medium hover:text-white cursor-pointer transition-colors">Contact</a></li>
+        <li>
+          <a href="#contact" class="mobile-link inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-semibold px-5 py-3 rounded-xl w-full justify-center cursor-pointer">
+            <i data-lucide="phone" class="w-4 h-4"></i>Get Free Quote
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <section class="hero" id="hero">
-    <canvas id="particleCanvas"></canvas>
-    <div class="hero-grid-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge reveal"><i class="fa-solid fa-star"></i> 5.0 Star Rated · Waukee, IA</div>
-      <h1 class="hero-title reveal">Insulation &amp; Drywall<br /><span class="gradient-text">Built to Last.</span></h1>
-      <p class="hero-subtitle reveal">Professional spray foam insulation and drywall services for central Iowa homeowners and builders. On time. Clean work. Guaranteed.</p>
-      <div class="hero-cta reveal">
-        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-file-invoice"></i> Get Free Quote</a>
-        <a href="tel:+15155550000" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Now</a>
+  <!-- HERO -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16">
+    <div class="absolute inset-0 hero-bg"></div>
+    <div class="absolute inset-0 grid-overlay opacity-20"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 glass-badge px-4 py-2 rounded-full mb-8 hero-fade" style="--delay:0.1s">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+        <span class="text-sm font-medium text-brand-cyan">Serving Waukee, Clive & Central Iowa</span>
       </div>
-      <div class="hero-stats reveal">
-        <div class="stat-item"><span class="stat-number">5.0</span><span class="stat-label">Star Rating</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">On-Time</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><span class="stat-number">Iowa</span><span class="stat-label">Licensed &amp; Insured</span></div>
+
+      <h1 class="font-heading font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-6 hero-fade" style="--delay:0.2s">
+        <span class="text-white">Iowa's Premier</span><br/>
+        <span class="gradient-text">Insulation &</span><br/>
+        <span class="text-white">Drywall Experts</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 hero-fade" style="--delay:0.35s">
+        Spray foam insulation that seals every draft, cuts energy bills, and transforms your home — paired with flawless drywall installation and repair.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 hero-fade" style="--delay:0.5s">
+        <a href="#contact" class="cta-primary cursor-pointer inline-flex items-center gap-3 text-white font-semibold text-lg px-8 py-4 rounded-2xl transition-all duration-300">
+          <i data-lucide="zap" class="w-5 h-5"></i>
+          Get My Free Quote
+        </a>
+        <a href="#services" class="cursor-pointer inline-flex items-center gap-3 text-slate-300 hover:text-white font-medium text-lg px-8 py-4 rounded-2xl border border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-200">
+          <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          View Services
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 hero-fade" style="--delay:0.65s">
+        <div class="trust-badge flex items-center gap-2">
+          <i data-lucide="star" class="w-5 h-5 text-brand-amber"></i>
+          <span class="text-sm font-medium text-slate-200">5.0 Star Rated</span>
+        </div>
+        <div class="w-px h-5 bg-white/20 hidden sm:block"></div>
+        <div class="trust-badge flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-5 h-5 text-brand-cyan"></i>
+          <span class="text-sm font-medium text-slate-200">Licensed & Insured</span>
+        </div>
+        <div class="w-px h-5 bg-white/20 hidden sm:block"></div>
+        <div class="trust-badge flex items-center gap-2">
+          <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+          <span class="text-sm font-medium text-slate-200">Always On Time</span>
+        </div>
+        <div class="w-px h-5 bg-white/20 hidden sm:block"></div>
+        <div class="trust-badge flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-5 h-5 text-brand-orange"></i>
+          <span class="text-sm font-medium text-slate-200">Clean Worksite Guaranteed</span>
+        </div>
       </div>
     </div>
-    <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      <span class="text-xs text-slate-400 font-medium tracking-widest uppercase">Scroll</span>
+      <div class="scroll-indicator"></div>
+    </div>
   </section>
 
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-sub">From new construction to repairs — we handle it all with precision and care.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card reveal" data-delay="0">
-          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
-          <div class="service-glow"></div>
-          <h3>Open-Cell Spray Foam</h3>
-          <p>Flexible, breathable insulation ideal for interior walls and attics. Excellent sound dampening and air sealing at a cost-effective price point.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Superior air sealing</li>
-            <li><i class="fa-solid fa-check"></i> Sound reduction</li>
-            <li><i class="fa-solid fa-check"></i> Budget-friendly</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+  <!-- STATS -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="stats-bar rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+        <div class="text-center">
+          <div class="font-heading font-black text-4xl md:text-5xl gradient-text mb-1 counter-num" data-target="5.0" data-decimals="1">5.0</div>
+          <div class="text-slate-400 text-sm font-medium">Star Rating</div>
         </div>
-        <div class="service-card reveal featured" data-delay="100">
-          <div class="featured-badge">Most Popular</div>
-          <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="service-glow"></div>
-          <h3>Closed-Cell Spray Foam</h3>
-          <p>The highest-performing insulation available. Creates a rigid, moisture-resistant barrier with the best R-value per inch — perfect for crawl spaces, basements, and exteriors.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Highest R-value</li>
-            <li><i class="fa-solid fa-check"></i> Moisture &amp; vapor barrier</li>
-            <li><i class="fa-solid fa-check"></i> Structural reinforcement</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="text-center">
+          <div class="font-heading font-black text-4xl md:text-5xl gradient-text mb-1 counter-num" data-target="100" data-suffix="%">100%</div>
+          <div class="text-slate-400 text-sm font-medium">On-Time Arrival</div>
         </div>
-        <div class="service-card reveal" data-delay="200">
-          <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
-          <div class="service-glow"></div>
-          <h3>New Construction Drywall</h3>
-          <p>Full drywall installation for new builds — hang, tape, finish, and texture. We work with builders and contractors to stay on schedule and on budget.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Hang, tape &amp; finish</li>
-            <li><i class="fa-solid fa-check"></i> Texture matching</li>
-            <li><i class="fa-solid fa-check"></i> Builder-friendly scheduling</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="text-center">
+          <div class="font-heading font-black text-4xl md:text-5xl gradient-text mb-1">3+ Yrs</div>
+          <div class="text-slate-400 text-sm font-medium">Trusted Service</div>
         </div>
-        <div class="service-card reveal" data-delay="300">
-          <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
-          <div class="service-glow"></div>
-          <h3>Drywall Repair</h3>
-          <p>Holes, cracks, water damage — no job too small. We patch and blend seamlessly so you can't tell the repair was ever there.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Seamless blending</li>
-            <li><i class="fa-solid fa-check"></i> Water damage repair</li>
-            <li><i class="fa-solid fa-check"></i> Fast turnaround</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal" data-delay="400">
-          <div class="service-icon"><i class="fa-solid fa-volume-xmark"></i></div>
-          <div class="service-glow"></div>
-          <h3>Wall Soundproofing</h3>
-          <p>Reduce noise between rooms, floors, and from outside. We use proven acoustic techniques — spray foam, resilient channels, and specialty drywall — for a quieter home.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check"></i> Home theater rooms</li>
-            <li><i class="fa-solid fa-check"></i> Bedroom privacy</li>
-            <li><i class="fa-solid fa-check"></i> Multi-family units</li>
-          </ul>
-          <a href="#contact" class="service-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card cta-card reveal" data-delay="500">
-          <div class="service-glow"></div>
-          <i class="fa-solid fa-phone-volume cta-card-icon"></i>
-          <h3>Not Sure What You Need?</h3>
-          <p>We'll walk you through the best solution for your home or project — no pressure, just honest advice.</p>
-          <a href="tel:+15155550000" class="btn btn-primary" style="margin-top:1.5rem;"><i class="fa-solid fa-phone"></i> Call Us Free</a>
+        <div class="text-center">
+          <div class="font-heading font-black text-4xl md:text-5xl gradient-text mb-1">0</div>
+          <div class="text-slate-400 text-sm font-medium">Complaints Filed</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="why-us" id="why-us">
-    <div class="why-bg-shape"></div>
-    <div class="container">
-      <div class="why-inner">
-        <div class="why-left reveal">
-          <span class="section-label">Why Brothers IFD?</span>
-          <h2 class="section-title">The Standard Others Claim.<br /><span class="gradient-text">We Deliver.</span></h2>
-          <p class="why-desc">We're not a big-box operation. We're local tradespeople who take personal pride in every job — which is why our customers keep coming back and sending their friends.</p>
-          <a href="#contact" class="btn btn-primary">Start Your Project</a>
+  <!-- SERVICES -->
+  <section id="services" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="section-badge">
+          <span class="dot bg-brand-orange"></span>
+          <span class="text-sm font-medium text-brand-orange">What We Do</span>
         </div>
-        <div class="why-right">
-          <div class="benefit-card reveal" data-delay="0"><div class="benefit-icon"><i class="fa-solid fa-certificate"></i></div><div class="benefit-text"><h4>Licensed &amp; Insured</h4><p>Fully licensed in Iowa and insured for your peace of mind. Every job is done to code.</p></div></div>
-          <div class="benefit-card reveal" data-delay="100"><div class="benefit-icon"><i class="fa-solid fa-clock"></i></div><div class="benefit-text"><h4>Always On Time</h4><p>We show up when we say we will. No waiting, no guessing, no excuses — your time is valuable.</p></div></div>
-          <div class="benefit-card reveal" data-delay="200"><div class="benefit-icon"><i class="fa-solid fa-broom"></i></div><div class="benefit-text"><h4>We Clean Up After Ourselves</h4><p>We leave your property the way we found it — cleaner, actually. Full job-site cleanup is standard.</p></div></div>
-          <div class="benefit-card reveal" data-delay="300"><div class="benefit-icon"><i class="fa-solid fa-star"></i></div><div class="benefit-text"><h4>5-Star Reputation</h4><p>Every review, every customer — we've earned a perfect 5.0 rating through consistent, quality work.</p></div></div>
-          <div class="benefit-card reveal" data-delay="400"><div class="benefit-icon"><i class="fa-solid fa-handshake"></i></div><div class="benefit-text"><h4>Honest &amp; Transparent Pricing</h4><p>You'll get a clear, detailed quote upfront — no hidden fees, no surprise charges at the end.</p></div></div>
-          <div class="benefit-card reveal" data-delay="500"><div class="benefit-icon"><i class="fa-solid fa-house"></i></div><div class="benefit-text"><h4>Local &amp; Community-Focused</h4><p>Based in Waukee, we're your neighbors — invested in the community we serve every day.</p></div></div>
-        </div>
+        <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-4">Our <span class="gradient-text">Services</span></h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Premium insulation and drywall solutions built for Iowa's climate — stopping drafts, cutting energy costs, delivering perfect finishes.</p>
       </div>
-    </div>
-  </section>
 
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Simple Process</span>
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-sub">Getting started is easy. We keep it straightforward from first contact to final cleanup.</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card reveal" data-delay="0"><div class="step-number">01</div><div class="step-icon"><i class="fa-solid fa-comments"></i></div><h3>Free Consultation</h3><p>Call us or fill out the quote form. We'll ask a few questions about your project, property, and goals — no obligation, no pressure.</p></div>
-        <div class="step-card reveal" data-delay="150"><div class="step-number">02</div><div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div><h3>On-Site Assessment &amp; Quote</h3><p>We visit your property, assess the scope of work, and deliver a clear, itemized quote — usually within 24 hours.</p></div>
-        <div class="step-card reveal" data-delay="300"><div class="step-number">03</div><div class="step-icon"><i class="fa-solid fa-circle-check"></i></div><h3>Professional Installation</h3><p>Our crew shows up on schedule, does the job right the first time, cleans up completely, and makes sure you're 100% satisfied.</p></div>
-      </div>
-    </div>
-  </section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
 
-  <section class="reviews" id="reviews">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">What Customers Say</span>
-        <h2 class="section-title">5-Star Reviews</h2>
-        <p class="section-sub">Don't take our word for it — here's what real customers say about working with Brothers IFD.</p>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card featured-review reveal" data-delay="0">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <blockquote>"Loved working with these guys. Showed up on time. Perfect work and cleaned up everything before they left. Would recommend to anyone I know."</blockquote>
-          <div class="reviewer"><div class="reviewer-avatar">CF</div><div class="reviewer-info"><strong>Charles Foster</strong><span>Verified Customer · Waukee, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
-        </div>
-        <div class="review-card reveal" data-delay="150">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <blockquote>"Incredibly professional team. They explained exactly what spray foam was best for our basement and got the job done in one day. The energy bill drop has been noticeable!"</blockquote>
-          <div class="reviewer"><div class="reviewer-avatar">MR</div><div class="reviewer-info"><strong>Mike R.</strong><span>Verified Customer · Clive, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
-        </div>
-        <div class="review-card reveal" data-delay="300">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <blockquote>"Used Brothers IFD for drywall on our new build. Flawless finish, on schedule, easy to work with. Our GC already has them lined up for the next two projects."</blockquote>
-          <div class="reviewer"><div class="reviewer-avatar">JT</div><div class="reviewer-info"><strong>Jennifer T.</strong><span>Verified Customer · Waukee, IA</span></div><div class="google-badge"><i class="fa-brands fa-google"></i></div></div>
-        </div>
-      </div>
-      <div class="reviews-cta reveal">
-        <div class="rating-summary"><span class="big-rating">5.0</span><div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><span class="rating-label">Average Google Rating</span></div>
-        <a href="https://g.page/r/review" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-google"></i> Leave Us a Review</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-area" id="service-area">
-    <div class="container">
-      <div class="service-area-inner">
-        <div class="area-left reveal">
-          <span class="section-label">Where We Work</span>
-          <h2 class="section-title">Serving Central Iowa</h2>
-          <p>Brothers Insulation Foam &amp; Drywall LLC is based in <strong>Waukee, IA</strong> — just 5–10 minutes from Clive — and proudly serves the entire central Iowa region.</p>
-          <div class="area-tags">
-            <span class="area-tag primary"><i class="fa-solid fa-location-dot"></i> Waukee</span>
-            <span class="area-tag primary"><i class="fa-solid fa-location-dot"></i> Clive</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> West Des Moines</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Urbandale</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Ankeny</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Johnston</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Des Moines</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Grimes</span>
-            <span class="area-tag"><i class="fa-solid fa-location-dot"></i> Altoona</span>
-            <span class="area-tag more"><i class="fa-solid fa-ellipsis"></i> And More</span>
+        <div class="service-card group cursor-pointer p-8 rounded-3xl border border-white/10 hover:border-brand-cyan/50 transition-all duration-300">
+          <div class="svc-icon from-brand-blue/20 to-brand-cyan/20 group-hover:from-brand-blue/40 group-hover:to-brand-cyan/40">
+            <i data-lucide="wind" class="w-7 h-7 text-brand-cyan"></i>
           </div>
-          <p class="area-note"><i class="fa-solid fa-circle-info"></i> Not sure if we cover your area? <a href="#contact">Send us a message</a> — we travel for the right job.</p>
+          <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-cyan transition-colors duration-200">Closed-Cell Spray Foam</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">The gold standard of insulation. Dense, rigid foam that creates an airtight moisture barrier — ideal for crawl spaces, walls, and rooflines in Iowa's harsh winters.</p>
+          <ul class="space-y-2">
+            <li class="svc-check text-brand-cyan"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Highest R-value per inch</li>
+            <li class="svc-check text-brand-cyan"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Moisture & vapor barrier</li>
+            <li class="svc-check text-brand-cyan"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Structural reinforcement</li>
+          </ul>
+          <div class="mt-6 arrow-link text-brand-blue group-hover:text-brand-cyan">
+            Learn more <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+          </div>
         </div>
-        <div class="area-right reveal">
-          <div class="map-card">
-            <div class="map-pulse"><div class="pulse-ring"></div><div class="pulse-ring delay-1"></div><div class="pulse-ring delay-2"></div><div class="map-pin"><i class="fa-solid fa-location-dot"></i></div></div>
-            <div class="map-label">Waukee, Iowa</div>
-            <div class="map-sublabel">Serving a 50-mile radius</div>
-            <div class="map-stats">
-              <div class="map-stat"><i class="fa-solid fa-road"></i><span>5–10 min from Clive</span></div>
-              <div class="map-stat"><i class="fa-solid fa-city"></i><span>All central Iowa</span></div>
+
+        <div class="service-card group cursor-pointer p-8 rounded-3xl border border-white/10 hover:border-brand-orange/50 transition-all duration-300">
+          <div class="svc-icon from-brand-orange/20 to-amber-400/20 group-hover:from-brand-orange/40 group-hover:to-amber-400/40">
+            <i data-lucide="sun" class="w-7 h-7 text-brand-orange"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-brand-orange transition-colors duration-200">Open-Cell Spray Foam</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">Lightweight, flexible foam that expands to fill every gap and cavity — perfect for interior walls, attics, and areas where breathability matters.</p>
+          <ul class="space-y-2">
+            <li class="svc-check text-brand-orange"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Superior sound dampening</li>
+            <li class="svc-check text-brand-orange"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Cost-effective coverage</li>
+            <li class="svc-check text-brand-orange"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Air & draft elimination</li>
+          </ul>
+          <div class="mt-6 arrow-link text-brand-orange group-hover:text-amber-400">
+            Learn more <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+          </div>
+        </div>
+
+        <div class="service-card group cursor-pointer p-8 rounded-3xl border border-white/10 hover:border-green-400/50 transition-all duration-300">
+          <div class="svc-icon from-green-500/20 to-emerald-400/20 group-hover:from-green-500/40 group-hover:to-emerald-400/40">
+            <i data-lucide="layers" class="w-7 h-7 text-green-400"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-green-400 transition-colors duration-200">Drywall Installation & Repair</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">New construction hang & finish or patch repairs — our crews deliver perfectly smooth, paint-ready walls every time. No texture mismatch, no callbacks.</p>
+          <ul class="space-y-2">
+            <li class="svc-check text-green-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> New construction framing to finish</li>
+            <li class="svc-check text-green-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Hole & water damage repairs</li>
+            <li class="svc-check text-green-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Seamless texture matching</li>
+          </ul>
+          <div class="mt-6 arrow-link text-green-400 group-hover:text-emerald-300">
+            Learn more <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+          </div>
+        </div>
+
+        <div class="service-card group cursor-pointer p-8 rounded-3xl border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+          <div class="svc-icon from-purple-500/20 to-violet-400/20 group-hover:from-purple-500/40 group-hover:to-violet-400/40">
+            <i data-lucide="volume-x" class="w-7 h-7 text-purple-400"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-3 group-hover:text-purple-400 transition-colors duration-200">Wall Soundproofing</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">Create peaceful, quiet rooms with professional soundproofing solutions. Perfect for home offices, media rooms, bedrooms, and shared walls.</p>
+          <ul class="space-y-2">
+            <li class="svc-check text-purple-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Open-cell foam acoustic fill</li>
+            <li class="svc-check text-purple-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Decoupled drywall systems</li>
+            <li class="svc-check text-purple-400"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Home office & media rooms</li>
+          </ul>
+          <div class="mt-6 arrow-link text-purple-400 group-hover:text-violet-300">
+            Learn more <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why-us" class="py-24 relative">
+    <div class="section-glow left"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div class="reveal">
+          <div class="section-badge">
+            <span class="dot bg-brand-cyan"></span>
+            <span class="text-sm font-medium text-brand-cyan">Why Choose Us</span>
+          </div>
+          <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-6">Built on <span class="gradient-text">Trust</span><br/>& Craftsmanship</h2>
+          <p class="text-slate-400 leading-relaxed mb-8">We're not a faceless national chain — we're your neighbors in central Iowa. Brothers Insulation was built on the belief that every customer deserves honest work, fair pricing, and a spotless home when the job is done.</p>
+
+          <div class="space-y-4">
+            <div class="why-item group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 cursor-default">
+              <div class="w-10 h-10 rounded-xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="clock" class="w-5 h-5 text-brand-cyan"></i>
+              </div>
+              <div>
+                <div class="font-heading font-semibold text-white mb-1">Always On Time</div>
+                <div class="text-slate-400 text-sm leading-relaxed">We respect your schedule. Our crews show up when promised, every single time — no waiting around, no excuses.</div>
+              </div>
+            </div>
+            <div class="why-item group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 cursor-default">
+              <div class="w-10 h-10 rounded-xl bg-brand-orange/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="w-5 h-5 text-brand-orange"></i>
+              </div>
+              <div>
+                <div class="font-heading font-semibold text-white mb-1">We Clean Up Everything</div>
+                <div class="text-slate-400 text-sm leading-relaxed">Your home will look cleaner when we leave than when we arrived. Full cleanup is always included — zero extra charge.</div>
+              </div>
+            </div>
+            <div class="why-item group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 cursor-default">
+              <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5 text-green-400"></i>
+              </div>
+              <div>
+                <div class="font-heading font-semibold text-white mb-1">5-Star Quality, Every Job</div>
+                <div class="text-slate-400 text-sm leading-relaxed">Perfect reviews aren't accidental — they're the result of never cutting corners and always treating your home like our own.</div>
+              </div>
+            </div>
+            <div class="why-item group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors duration-200 cursor-default">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5 text-purple-400"></i>
+              </div>
+              <div>
+                <div class="font-heading font-semibold text-white mb-1">Local Iowa Experts</div>
+                <div class="text-slate-400 text-sm leading-relaxed">We know Iowa winters. We know what your home needs to stay sealed and energy-efficient through every season.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="relative">
+            <div class="glass-card rounded-3xl p-8 border border-white/10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-amber/30 to-brand-orange/30 flex items-center justify-center">
+                  <i data-lucide="star" class="w-7 h-7 text-brand-amber"></i>
+                </div>
+                <div>
+                  <div class="font-heading font-bold text-white text-lg">5.0 Perfect Rating</div>
+                  <div class="text-slate-400 text-sm">Google Reviews</div>
+                </div>
+              </div>
+              <blockquote class="text-slate-300 leading-relaxed mb-6 text-sm italic border-l-2 border-brand-cyan pl-4">
+                "Loved working with these guys. Showed up on time. Perfect work and cleaned up everything before they left. Would recommend to anyone I know."
+              </blockquote>
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center font-heading font-bold text-sm">CF</div>
+                <div>
+                  <div class="text-white font-medium text-sm">Charles Foster</div>
+                  <div class="flex gap-0.5">
+                    <i data-lucide="star" class="w-3 h-3 text-brand-amber fill-brand-amber"></i>
+                    <i data-lucide="star" class="w-3 h-3 text-brand-amber fill-brand-amber"></i>
+                    <i data-lucide="star" class="w-3 h-3 text-brand-amber fill-brand-amber"></i>
+                    <i data-lucide="star" class="w-3 h-3 text-brand-amber fill-brand-amber"></i>
+                    <i data-lucide="star" class="w-3 h-3 text-brand-amber fill-brand-amber"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="border-t border-white/10 my-6"></div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-4 rounded-2xl bg-brand-blue/10 border border-brand-blue/20">
+                  <div class="font-heading font-black text-2xl text-brand-cyan mb-1">40%</div>
+                  <div class="text-slate-400 text-xs">Avg. Energy Savings</div>
+                </div>
+                <div class="text-center p-4 rounded-2xl bg-brand-orange/10 border border-brand-orange/20">
+                  <div class="font-heading font-black text-2xl text-brand-orange mb-1">$600+</div>
+                  <div class="text-slate-400 text-xs">Annual Bill Reduction</div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 glass-badge px-4 py-2 rounded-xl flex items-center gap-2 float-badge">
+              <i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i>
+              <span class="text-xs font-semibold text-white">Fully Licensed & Insured</span>
             </div>
           </div>
         </div>
@@ -238,57 +368,327 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Get Started</span>
-        <h2 class="section-title">Request Your <span class="gradient-text">Free Quote</span></h2>
-        <p class="section-sub">Fill out the form and we'll get back to you within one business day. No commitment required.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h3>Get in Touch</h3>
-          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><span class="contact-label">Phone</span><a href="tel:+15155550000" class="contact-value">(515) 555-0000</a></div></div>
-          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><span class="contact-label">Email</span><a href="mailto:info@brothersifd.com" class="contact-value">info@brothersifd.com</a></div></div>
-          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><span class="contact-label">Based In</span><span class="contact-value">Waukee, Iowa</span></div></div>
-          <div class="contact-detail"><div class="contact-icon"><i class="fa-solid fa-clock"></i></div><div><span class="contact-label">Hours</span><span class="contact-value">Mon–Sat: 7AM – 6PM</span></div></div>
-          <div class="contact-promise"><i class="fa-solid fa-bolt"></i><div><strong>Fast Response Guarantee</strong><p>We respond to all quote requests within 1 business day.</p></div></div>
+  <!-- PROCESS -->
+  <section id="process" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="section-badge">
+          <span class="dot bg-brand-amber"></span>
+          <span class="text-sm font-medium text-brand-amber">Simple & Easy</span>
         </div>
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="John Smith" required /><span class="field-error" id="nameError"></span></div>
-              <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(515) 000-0000" required /><span class="field-error" id="phoneError"></span></div>
+        <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-4">How It <span class="gradient-text">Works</span></h2>
+        <p class="text-slate-400 max-w-xl mx-auto">From first call to finished job — we keep the process simple, transparent, and stress-free for you.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+        <div class="process-card group text-center p-6 rounded-3xl border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 relative cursor-default">
+          <div class="step-num text-brand-cyan/30">01</div>
+          <div class="proc-icon mx-auto mb-5 from-brand-blue/20 to-brand-cyan/20 group-hover:from-brand-blue/40 group-hover:to-brand-cyan/40">
+            <i data-lucide="phone-call" class="w-7 h-7 text-brand-cyan"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white mb-2">Free Consultation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Call or fill out our form. We'll ask a few questions about your home and what you're trying to fix.</p>
+        </div>
+        <div class="process-card group text-center p-6 rounded-3xl border border-white/10 hover:border-brand-orange/40 transition-all duration-300 relative cursor-default">
+          <div class="step-num text-brand-orange/30">02</div>
+          <div class="proc-icon mx-auto mb-5 from-brand-orange/20 to-amber-400/20 group-hover:from-brand-orange/40 group-hover:to-amber-400/40">
+            <i data-lucide="search" class="w-7 h-7 text-brand-orange"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white mb-2">On-Site Assessment</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We come to you, evaluate your space, and provide an honest quote — no pressure, no surprises.</p>
+        </div>
+        <div class="process-card group text-center p-6 rounded-3xl border border-white/10 hover:border-green-400/40 transition-all duration-300 relative cursor-default">
+          <div class="step-num text-green-400/30">03</div>
+          <div class="proc-icon mx-auto mb-5 from-green-500/20 to-emerald-400/20 group-hover:from-green-500/40 group-hover:to-emerald-400/40">
+            <i data-lucide="hammer" class="w-7 h-7 text-green-400"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white mb-2">Expert Installation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Our crew arrives on time and completes the work with precision — following every industry best practice.</p>
+        </div>
+        <div class="process-card group text-center p-6 rounded-3xl border border-white/10 hover:border-purple-400/40 transition-all duration-300 relative cursor-default">
+          <div class="step-num text-purple-400/30">04</div>
+          <div class="proc-icon mx-auto mb-5 from-purple-500/20 to-violet-400/20 group-hover:from-purple-500/40 group-hover:to-violet-400/40">
+            <i data-lucide="sparkles" class="w-7 h-7 text-purple-400"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white mb-2">Clean & Done</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">We leave your home spotless. Full cleanup, final walkthrough, and you start saving on energy immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-24 relative">
+    <div class="section-glow right"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="section-badge">
+          <span class="dot bg-brand-amber"></span>
+          <span class="text-sm font-medium text-brand-amber">5-Star Reviews</span>
+        </div>
+        <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-4">Real <span class="gradient-text">Customers</span>,<br/>Real Results</h2>
+        <div class="flex items-center justify-center gap-2 mt-4">
+          <div class="flex gap-1">
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+          </div>
+          <span class="font-heading font-bold text-white">5.0</span>
+          <span class="text-slate-400 text-sm">on Google</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+        <div class="glass-card p-8 rounded-3xl border border-white/10 hover:border-brand-amber/30 transition-all duration-300 cursor-default">
+          <div class="flex gap-1 mb-5">
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brand-amber fill-brand-amber"></i>
+          </div>
+          <blockquote class="text-slate-200 leading-relaxed mb-6 text-base">
+            "Loved working with these guys. Showed up on time. Perfect work and cleaned up everything before they left. Would recommend to anyone I know. Thanks guys!!"
+          </blockquote>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center font-heading font-bold text-sm">CF</div>
+              <div>
+                <div class="text-white font-semibold text-sm">Charles Foster</div>
+                <div class="text-slate-500 text-xs flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> Waukee, IA</div>
+              </div>
             </div>
-            <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="john@example.com" required /><span class="field-error" id="emailError"></span></div>
-            <div class="form-group"><label for="service">Service Needed *</label><select id="service" name="service" required><option value="">Select a service...</option><option value="open-cell-foam">Open-Cell Spray Foam</option><option value="closed-cell-foam">Closed-Cell Spray Foam</option><option value="new-construction-drywall">New Construction Drywall</option><option value="drywall-repair">Drywall Repair</option><option value="soundproofing">Wall Soundproofing</option><option value="not-sure">Not Sure / Need Advice</option></select><span class="field-error" id="serviceError"></span></div>
-            <div class="form-group"><label for="message">Project Details</label><textarea id="message" name="message" rows="4" placeholder="Tell us about your project — size, location, timeline, any questions..."></textarea></div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> Send My Quote Request</button>
-            <div class="form-success" id="formSuccess"><i class="fa-solid fa-circle-check"></i><strong>Message Sent!</strong> We'll be in touch within 1 business day.</div>
+            <div class="text-xs text-slate-500">Google Review</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl border border-brand-blue/30 bg-gradient-to-br from-brand-blue/10 to-brand-cyan/5 flex flex-col items-center justify-center text-center cursor-default">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-blue/30 to-brand-cyan/30 flex items-center justify-center mb-5">
+            <i data-lucide="message-square-plus" class="w-8 h-8 text-brand-cyan"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white text-xl mb-3">You Could Be Next</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">Join our growing list of happy Iowa homeowners who finally said goodbye to drafts and high energy bills.</p>
+          <a href="#contact" class="cursor-pointer cta-secondary inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            Get Your Free Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="glass-card rounded-3xl p-10 md:p-14 border border-white/10 reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="section-badge">
+              <span class="dot bg-brand-cyan"></span>
+              <span class="text-sm font-medium text-brand-cyan">Service Area</span>
+            </div>
+            <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-5">Proudly Serving <span class="gradient-text">Central Iowa</span></h2>
+            <p class="text-slate-400 leading-relaxed mb-8">Based in Waukee — just minutes from Clive — we serve homes and businesses across the Des Moines metro area.</p>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">Waukee</span>
+              </div>
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">Clive</span>
+              </div>
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">West Des Moines</span>
+              </div>
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">Urbandale</span>
+              </div>
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">Ankeny</span>
+              </div>
+              <div class="area-chip flex items-center gap-2 px-4 py-3 rounded-xl cursor-default">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0"></i>
+                <span class="text-sm font-medium text-slate-200">Des Moines</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-visual rounded-2xl p-8 flex flex-col items-center justify-center min-h-64 text-center">
+            <div class="map-pin-pulse mb-4">
+              <i data-lucide="map-pin" class="w-10 h-10 text-brand-cyan relative z-10"></i>
+            </div>
+            <div class="font-heading font-bold text-white text-xl mb-1">Waukee, IA</div>
+            <div class="text-slate-400 text-sm mb-4">Our Home Base</div>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-orange"></i>
+              <span>5–10 min from Clive · Serving 50+ mile radius</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 relative">
+    <div class="section-glow left"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="section-badge">
+          <span class="dot bg-brand-orange"></span>
+          <span class="text-sm font-medium text-brand-orange">Get Started Today</span>
+        </div>
+        <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-4">Ready to <span class="gradient-text">Stop the Drafts</span>?</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Get your free, no-obligation quote. We respond within a few hours — most jobs scheduled within days.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 reveal">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-brand-blue/30 transition-all duration-300 cursor-default">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5 text-brand-cyan"></i>
+              </div>
+              <div>
+                <div class="text-slate-400 text-xs mb-0.5 font-medium uppercase tracking-wide">Call Us</div>
+                <div class="text-white font-semibold">Available by Request</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-brand-orange/30 transition-all duration-300 cursor-default">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-orange/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
+              </div>
+              <div>
+                <div class="text-slate-400 text-xs mb-0.5 font-medium uppercase tracking-wide">Location</div>
+                <div class="text-white font-semibold">Waukee, Iowa</div>
+                <div class="text-slate-400 text-sm">Serving Central Iowa</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-white/10 hover:border-green-400/30 transition-all duration-300 cursor-default">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+              </div>
+              <div>
+                <div class="text-slate-400 text-xs mb-0.5 font-medium uppercase tracking-wide">Response Time</div>
+                <div class="text-white font-semibold">Within Hours</div>
+                <div class="text-slate-400 text-sm">Mon–Sat, 7am–6pm</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl border border-brand-blue/20 bg-gradient-to-br from-brand-blue/10 to-transparent">
+            <div class="flex items-start gap-3">
+              <i data-lucide="info" class="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+              <p class="text-slate-400 text-sm leading-relaxed">Free quotes with no obligation. We respond same-day and can usually schedule within the week.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+          <form id="contact-form" class="glass-card p-8 rounded-3xl border border-white/10" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label for="fname" class="block text-sm font-medium text-slate-300 mb-2">First Name *</label>
+                <input type="text" id="fname" name="fname" required placeholder="John" class="form-input" />
+              </div>
+              <div>
+                <label for="lname" class="block text-sm font-medium text-slate-300 mb-2">Last Name *</label>
+                <input type="text" id="lname" name="lname" required placeholder="Smith" class="form-input" />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com" class="form-input" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(515) 555-0100" class="form-input" />
+              </div>
+            </div>
+            <div class="mb-5">
+              <label for="service" class="block text-sm font-medium text-slate-300 mb-2">Service Needed *</label>
+              <select id="service" name="service" required class="form-input cursor-pointer">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="closed-cell">Closed-Cell Spray Foam</option>
+                <option value="open-cell">Open-Cell Spray Foam</option>
+                <option value="drywall-install">Drywall Installation</option>
+                <option value="drywall-repair">Drywall Repair</option>
+                <option value="soundproofing">Wall Soundproofing</option>
+                <option value="other">Not Sure / Multiple</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Tell Us About Your Project</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe your home, the areas you want insulated or repaired, and any other details..." class="form-input resize-none"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="cta-primary cursor-pointer w-full inline-flex items-center justify-center gap-3 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-300">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span id="btn-text">Send My Free Quote Request</span>
+            </button>
+            <p class="text-center text-xs text-slate-600 mt-4">No spam, ever. We'll only contact you about your project.</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-glow"></div>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#hero" class="nav-logo footer-logo"><span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span><span class="logo-text">Brothers <span class="accent">IFD</span></span></a>
-          <p>Brothers Insulation Foam &amp; Drywall LLC — delivering professional insulation and drywall services across central Iowa with a commitment to quality, honesty, and craftsmanship.</p>
-          <div class="footer-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>5.0 Google Rating</span></div>
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-xl flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-none stroke-white stroke-2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9,22 9,12 15,12 15,22"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-white text-sm">Brothers Insulation</div>
+              <div class="text-brand-cyan text-xs">Foam & Drywall LLC</div>
+            </div>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed">Waukee, Iowa's trusted spray foam and drywall specialists — delivering energy savings and perfect finishes since day one.</p>
         </div>
-        <div class="footer-links-col"><h4>Services</h4><ul><li><a href="#services">Open-Cell Spray Foam</a></li><li><a href="#services">Closed-Cell Spray Foam</a></li><li><a href="#services">New Construction Drywall</a></li><li><a href="#services">Drywall Repair</a></li><li><a href="#services">Wall Soundproofing</a></li></ul></div>
-        <div class="footer-links-col"><h4>Company</h4><ul><li><a href="#why-us">Why Choose Us</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#service-area">Service Area</a></li><li><a href="#contact">Get Free Quote</a></li></ul></div>
-        <div class="footer-contact-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+15155550000">(515) 555-0000</a></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:info@brothersifd.com">info@brothersifd.com</a></div><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waukee, Iowa</span></div><div class="footer-contact-item"><i class="fa-solid fa-clock"></i><span>Mon–Sat: 7AM – 6PM</span></div></div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wide">Services</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Closed-Cell Spray Foam</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Open-Cell Spray Foam</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Drywall Installation</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Drywall Repair</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Wall Soundproofing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4 text-sm uppercase tracking-wide">Location</h4>
+          <div class="flex items-start gap-2 text-slate-400 text-sm mb-4">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"></i>
+            <span>Waukee, Iowa — Serving Waukee, Clive, West Des Moines, Urbandale, Ankeny & surrounding areas</span>
+          </div>
+          <a href="#contact" class="cursor-pointer inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-brand-blue/30 transition-all duration-200">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            Get Free Quote
+          </a>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2025 Brothers Insulation Foam &amp; Drywall LLC. All rights reserved. · Waukee, IA</p><p class="footer-disclaimer">Licensed &amp; Insured · Serving central Iowa</p></div>
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-600 text-xs">© 2025 Brothers Insulation Foam & Drywall LLC. All rights reserved.</p>
+        <p class="text-slate-600 text-xs">Waukee, Iowa · Licensed & Insured</p>
+      </div>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
   <script src="script.js"></script>
 </body>
 </html>
